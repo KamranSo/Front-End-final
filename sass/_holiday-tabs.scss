@@ -1,0 +1,79 @@
+#holidays-tabs{
+    #h-tabs{
+        transform: translateY(-87px);
+        background: transparent;
+        display: flex;
+        list-style: none;
+        li{
+            margin-right: 5px;
+            a{
+                opacity: 0.6;
+                background: #fff;
+                color: #000;
+                display: block;
+                padding: 0 20px;
+                font-weight: bold;
+                height: 40px;
+                line-height: 40px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 12px;
+                i{
+                    font-size: 15px;
+                    margin-right: 10px;
+                }
+                &:hover{
+                    color: $common-color;
+                    opacity: .8;
+                    i{
+                        color: #fdb714
+                    }
+                }
+            }
+        }
+        li.active{
+            a{
+                color: $common-color;
+                opacity: 1;
+                i{
+                    color: #fdb714
+                }
+            }
+        }
+    }
+    .h-tab-content{
+        h2{
+            font-size: 20px;
+            color: $common-color;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+        }
+        p{
+            font-size: 15px;
+            color: #838383;
+            line-height: 25px;
+        }
+        .image-holder{
+            background: white;
+            padding: 5px;
+            border-radius: 100%;
+            border: 1px solid #bfbfbf;
+            position: absolute;
+            a{
+                width: 100%;
+                display: block;
+                border-radius: 100%;
+                overflow: hidden;
+                height: 100%;
+            }
+        }    
+        
+    }
+}
+@media (max-width: 768px){
+    #holidays-tabs{
+        #h-tabs{
+            display: block;
+        }
+    }
+}

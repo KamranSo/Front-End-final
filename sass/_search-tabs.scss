@@ -1,0 +1,180 @@
+#search-tabs{
+    padding-bottom: 40px;
+    margin-top: -20px;
+    .large-screen-tabs{
+        display: flex;
+        list-style: none;
+        transform: translateY(-20px);
+        li{
+            margin-right: 4px;
+            background-color: rgba($color: white, $alpha: .4);
+            cursor: pointer;
+            a{
+                display: inline-block;
+                padding: 15px 25px;
+                text-transform: uppercase;
+                font-size: 1.1em;
+                color: black;
+                font-weight: bold;
+                opacity: .4;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            &:hover{
+                background-color: rgba($color: white, $alpha: .7);
+            }
+        }
+        .active{
+            background-color: rgba($color: white, $alpha: 1);
+            a{
+                color: $common-color;
+                opacity: 1;
+            }
+            &:hover{
+                background-color: rgba($color: white, $alpha: 1);
+            }
+        }
+    }
+    .tab-content{
+        h4{
+            color: #2d3e52;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        label{
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-size: 11px;
+            color: #838383;
+        }
+        input,select{
+            width: 100%;
+            background: #f5f5f5;
+            padding-left: 10px;
+            border: none;
+            height: 31px;
+        }
+        ::-webkit-input-placeholder{
+            font-size: 12px;
+        }
+        button{
+            padding: 8px;
+            background: #98ce44;
+            border: none;
+            outline: none;
+            margin-top: 60px;
+            position: relative;
+            padding-right: 35px;
+            &::before{
+                content: "";
+                width: 30px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: url(../img/icon-check.png) center center no-repeat #7db921;;
+            }
+            &:hover{
+                background: #7db921;
+                &::before{
+                    background: url(../img/icon-check.png) center center no-repeat #98ce44;
+                }
+            }
+            a{
+                font-size: 11px;
+                color: white;
+                text-transform: uppercase;
+                font-weight: bold;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        #tab-flights, #tab-flights-vs-hotels, #tab-cars{
+            select:last-child{
+                margin-top: 38px;
+            }
+            button{
+                margin-top: 36px;
+            }
+        }
+    }
+    .small-screen-tabs{
+        transform: translateY(-20px);
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 40px;
+        width: 100%;
+        li{
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background: white;
+            position: absolute;
+            transition: all .3s;
+            a{
+                color: $common-color;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 10px;
+                display: block;
+                width: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .3s ease;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        i{
+            cursor: pointer;
+            position: absolute;
+            background: $common-color;
+            padding: 7px 12px;
+            z-index: 2;
+            color: white;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+        .left{
+            left: 7px;
+            background: #d9d9d9;
+        }
+        .right{
+            right: 7px;
+        }
+        .active{
+            z-index: 1;
+            a{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+@media (max-width: 1010px) {
+    #search-tabs{
+        .large-screen-tabs{
+            display: none;
+        }
+        .small-screen-tabs{
+            display: flex;
+        }
+    }
+}
+@media (min-width: 1010px) {
+    #search-tabs{
+        .large-screen-tabs{
+            display: flex;
+        }
+        .small-screen-tabs{
+            display: none;
+        }
+    }
+}

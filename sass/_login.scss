@@ -1,0 +1,83 @@
+#login-body{
+    background-color: #8f3fa1;
+    background-image: -webkit-radial-gradient(center center, circle cover, #b459c8, #762d87 100%);
+    #login{
+        padding: 40px 0;
+        text-align: center;
+        h1{
+            margin-bottom: 40px;
+        }
+        h3{
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 10px 6px #9543a7;
+            font-size: 29px;
+            margin-bottom: 40px;
+        }
+        h2{
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            &::after{
+                content: "|";
+                font-size: 16px;
+                position: absolute;
+                top: 49%;
+                transform: translateY(-50%);
+                margin-left: 10px;
+            }
+        }
+        input{
+            margin-left: 20px;
+            height: 100%;
+            border: transparent;
+            background: transparent;
+            width: 100%;
+            outline: transparent
+        }
+        .username, .password{
+            display: flex;
+            align-items: center;
+            padding: 0 26px;
+            border: 3px solid white;
+            height: 70px;
+            border-radius: 35px 35px 35px 35px;
+            margin-bottom: 30px;
+            background: #9543a7;
+        }
+        ::-webkit-input-placeholder{
+            font-size: 16px;
+        }
+        button{
+            text-transform: uppercase;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            border: none;
+            height: 70px;
+            box-shadow: 0 10px 6px rgba(149,67,167,0.6);
+            border-radius: 35px 35px 35px 35px;
+            background: #fdb714;
+            position: relative;
+            margin-bottom: 30px;
+            i{
+                right: 5px;
+                position: absolute;
+                font-size: 64px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:hover{
+                background: #e9b02b;
+            }
+        }
+        p{
+            color: #822e95;
+            font-size: 13px;
+        }
+    }
+}

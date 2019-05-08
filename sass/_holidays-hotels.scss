@@ -1,0 +1,49 @@
+#holidays-hotels{
+    padding-top: 40px;
+    padding-bottom: 60px;
+    .section-title{
+        small{
+            font-size: 10px;
+            color: #838383;
+            display: block;
+        }
+        margin-bottom: 20px;
+    }
+    .pop-dest{
+        ul{
+            border-right: 1px solid #fff;
+            list-style: none;
+            li{
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                a{
+                    font-size: 14px;
+                    color: #2d3e52;
+                    text-transform: capitalize;
+                    small{
+                        display: block;
+                        color: #838383;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                i{
+                    margin-right: 10px;
+                    color: #d9d9d9;
+                }
+                &:hover{
+                    a, i{
+                        color: $common-color;
+                    }
+                }
+            }
+        }
+        ul:last-child{
+            border: none;   
+        }
+    }
+}

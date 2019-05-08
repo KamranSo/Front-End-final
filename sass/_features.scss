@@ -1,0 +1,58 @@
+#features{
+    background: url(../img/global-map.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: auto;
+    padding-top: 80px;
+    padding-bottom: 70px;
+    .image-holder{
+        overflow: hidden;
+        height: 90px;
+        position: relative;
+        a{
+            display: block;
+            &::before{
+                transition: all .3s ease;
+                width: 100%;
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: #fdb714;
+                height: 100%;
+                z-index: 1;
+                opacity: .6;
+            }
+            img{
+                transition: all .3s ease;
+                width: 100%;
+                position: relative;
+                top: -20px;
+            }
+
+        }
+        &:hover{
+            a{
+                &::before{
+                    opacity: 0;
+                }
+            }
+            img{
+                transform: scale(1.1)
+            }
+        }
+    }
+    .details{
+        background: white;
+        padding: 15px 20px;
+        .box-title{
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 14px;
+            color: #838383;
+            line-height: 20px;
+        }
+    }
+}
